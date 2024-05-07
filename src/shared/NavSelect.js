@@ -4,7 +4,6 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const NavSelect = ({ title, options, w }) => {
   const [isShow, setshow] = useState(false);
-  console.log(w)
   return (
     <div 
     className=" flex flex-col h-full"
