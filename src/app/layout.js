@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/shared/Navbar";
 import { Toaster } from "react-hot-toast";
+import NavManue from "@/shared/NavManue";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
+        <NavManue/>
         {children}
         <Toaster position="top-center" containerClassName="text-xs" reverseOrder={false} />
       </body>
