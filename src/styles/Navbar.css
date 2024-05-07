@@ -1,0 +1,10 @@
+select{
+    color: #098cd0;
+    font-size: small;
+    font-weight: 700;
+    background-color: transparent;
+}
+
+option {
+    padding: 10px;
+}
