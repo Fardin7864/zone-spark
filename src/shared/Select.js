@@ -11,7 +11,7 @@ const SelectCur = () => {
   const [language, setLanguage] = useState("English");
   return (
     <>
-      <div className=" flex justify-center items-center gap-2">
+      <div className=" lg:flex justify-center items-center gap-2 hidden ">
         <div
         onMouseEnter={() => setCurShow(true)}
         onMouseLeave={() => setCurShow(false)}
@@ -27,8 +27,8 @@ const SelectCur = () => {
           <div className=" relative -left-7">
             <div className={`${isCurShow ? "block" : "hidden"} absolute top-4`}>
               <div className=" relative flex flex-col bg-white px-5 py-1 gap-3">
-                <button className=" hover:text-[#098cd0] font-bold text-xs">BDT</button>
-                <button className=" hover:text-[#098cd0] font-bold text-xs">USD</button>
+                <button onClick={() => setCurrency("BDT")} className=" hover:text-[#098cd0] font-bold text-xs">BDT</button>
+                <button onClick={() => setCurrency("USD")} className=" hover:text-[#098cd0] font-bold text-xs">USD</button>
               </div>
             </div>
           </div>
@@ -49,8 +49,8 @@ const SelectCur = () => {
               className={`${isLangShow ? "block" : "hidden"} absolute top-4`}
             >
               <div className=" relative flex flex-col bg-white px-5 gap-3 py-1">
-                <button className=" hover:text-[#098cd0] font-bold text-xs">English</button>
-                <button className=" hover:text-[#098cd0] font-bold text-xs">বাংলা</button>
+                <button onClick={() => setLanguage("English")} className=" hover:text-[#098cd0] font-bold text-xs">English</button>
+                <button onClick={() => setLanguage("বাংলা")} className=" hover:text-[#098cd0] font-bold text-xs">বাংলা</button>
               </div>
             </div>
           </div>
