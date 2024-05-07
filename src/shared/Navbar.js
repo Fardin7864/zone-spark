@@ -16,7 +16,7 @@ const Navbar = () => {
     <MainContainer color={"#e5f0ff"}>
     <div className=" bg-[#e5f0ff] flex justify-between items-center px-5 py-[2px]">
       <div className=" flex gap-4 justify-center items-center">
-        <Hamburger color={"black"} isShow={false}/>
+        <Hamburger color={"black"} isShow={true} tailClass={"top-[13px]"}/>
         <Image
           src={"https://zonesparks.com/assets/icon_logo-B9EY-gHI.svg"}
           width={200}

@@ -33,8 +33,8 @@ const vendor = [
 ];
 const NavManue = () => {
   return (
-    <MainContainer>
-      <div className=" bg-gradient-to-r from-[#090243] to-[#0987cb]">
+    <div className=" hidden md:block">
+      <div className=" bg-gradient-to-r from-[#090243] to-[#0987cb] overflow-hidden">
         <div className=" flex justify-between px-5">
           <div className=" w-full h-[49px] gap-2 flex items-center ">
             <div className=" flex gap-3 bg-[#098cd0] h-full justify-center items-center px-3 text-white text-sm font-semibold">
@@ -51,7 +51,7 @@ const NavManue = () => {
             <NavSelect title={"INVESTOR NETWORK"} options={investor} w={"40"} />
             <NavSelect title={"VENDOR NETWORK"} options={vendor} w={"40"} />
           </div>
-          <div className=" flex items-center gap-3 ">
+          <div className="xl:flex items-center gap-3 hidden ">
             <div className="h-[20px] w-[1px] bg-slate-200 my-auto  hidden md:block"></div>
             <div className=" flex gap-5 text-white">
             <MdOutlineFacebook/>
@@ -62,7 +62,7 @@ const NavManue = () => {
           </div>
         </div>
       </div>
-    </MainContainer>
+    </div>
   );
 };
 

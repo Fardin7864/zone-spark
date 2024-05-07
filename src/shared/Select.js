@@ -11,7 +11,7 @@ const SelectCur = () => {
   const [language, setLanguage] = useState("English");
   return (
     <>
-      <div className=" lg:flex justify-center items-center gap-2 hidden ">
+      <div className=" xl:flex justify-center items-center gap-2 hidden ">
         <div
         onMouseEnter={() => setCurShow(true)}
         onMouseLeave={() => setCurShow(false)}
