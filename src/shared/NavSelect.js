@@ -6,7 +6,7 @@ const NavSelect = ({ title, options, w }) => {
   const [isShow, setshow] = useState(false);
   return (
     <div 
-    className=" flex flex-col h-full"
+    className=" flex flex-col h-full z-100"
         onMouseEnter={() => setshow(true)}
         onMouseLeave={() => setshow(false)}
     >

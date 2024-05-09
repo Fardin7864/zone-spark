@@ -54,10 +54,10 @@ const NavManue = () => {
           <div className="xl:flex items-center gap-3 hidden ">
             <div className="h-[20px] w-[1px] bg-slate-200 my-auto  hidden md:block"></div>
             <div className=" flex gap-5 text-white">
-            <MdOutlineFacebook/>
-            <FaYoutube />
-            <FaLinkedin />
-            <FaTwitter />
+           <button> <MdOutlineFacebook/></button>
+           <button><FaYoutube /></button>
+           <button><FaLinkedin /></button>
+           <button><FaTwitter /></button>
             </div>
           </div>
         </div>

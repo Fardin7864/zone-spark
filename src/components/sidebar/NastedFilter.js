@@ -22,9 +22,9 @@ const Options = ({ title, options, icon}) => {
       </div>
         <div className=" ">
           <div className={`${isShow ? "block" : "hidden"} absolute w-40`}> 
-            <div className=" relative border-t top-2 flex flex-col bg-white justify-start shadow-xl rounded-xl">
+            <div className=" relative border-t top-2 flex flex-col bg-white justify-start shadow-xl rounded-md">
               {options?.map((option, ind) => (
-                <button key={ind} className=" hover:bg-[#098cd0] text-xs text-black text-start hover:text-white pl-3 py-3 border-b">
+                <button key={ind} className=" hover:bg-[#098cd0] text-xs text-black text-start hover:text-white pl-3 py-3 border-b rounded-md">
                   {option}
                 </button>
               ))}

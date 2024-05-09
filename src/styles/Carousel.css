@@ -1,0 +1,21 @@
+.carouselContainer {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imageContainer {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .image {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Adjust as needed */
+    opacity: 0;
+  }
+  
+  .active {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  

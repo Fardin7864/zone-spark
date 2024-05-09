@@ -10,7 +10,7 @@ const SidebarFilter = ({ title, options, w , icon, nestedOptions}) => {
   const [isShow, setshow] = useState(false);
   return (
     <div 
-    className=" flex h-full hover:bg-[#098cd0] hover:text-white text-black border-b"
+    className=" flex h-full hover:bg-[#098cd0] hover:text-white text-black border-b z-20"
         onMouseEnter={() => setshow(true)}
         onMouseLeave={() => setshow(false)}
     >

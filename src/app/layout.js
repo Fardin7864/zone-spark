@@ -15,8 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className=" z-30">
         <Navbar />
         <NavManue/>
+        </div>
         {children}
         <Toaster position="top-center" containerClassName="text-xs" reverseOrder={false} />
       </body>

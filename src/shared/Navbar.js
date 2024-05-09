@@ -14,7 +14,7 @@ const Navbar = () => {
  
   return (
     <MainContainer color={"#e5f0ff"}>
-    <div className=" bg-[#e5f0ff] flex justify-between items-center px-5 py-[2px]">
+    <div className=" bg-[#e5f0ff] flex justify-between items-center px-5 py-[2px] z-10">
       <div className=" flex gap-4 justify-center items-center">
         <Hamburger color={"black"} isShow={true} tailClass={"top-[13px]"}/>
         <Image
@@ -31,23 +31,23 @@ const Navbar = () => {
           <SelectCur />
           <div className="h-[20px] w-[1px] bg-gray-800 my-auto  hidden md:block"></div>
           <div className=" flex justify-between items-center gap-8 relative bottom-1">
-            <div className=" md:flex flex-col justify-center items-center  hidden">
+            <button className=" hover:text-blue-500 md:flex flex-col justify-center items-center  hidden">
               <sub className=" bg-[#098cd0] p-1 text-white rounded-full py-2 left-3 top-3">
                 0
               </sub>
               <GoHeart className=" text-2xl " />
               <p className=" text-[10px] font-semibold">Wishlist</p>
-            </div>
+            </button>
 
-            <div className=" flex flex-col justify-center items-center">
+            <button className=" hover:text-blue-500 flex flex-col justify-center items-center">
               <sup className=" bg-[#098cd0] p-1 text-white rounded-full py-2 left-3 top-3">
                 0
               </sup>
               <BsCart3  className=" text-2xl " />
               <p  className=" text-[10px] font-semibold">Cart</p>
-            </div>
+            </button>
 
-            <button className=" hidden md:flex flex-col justify-center items-center relative top-[7px]">
+            <button className=" hover:text-blue-500 hidden md:flex flex-col justify-center items-center relative top-[7px]">
               <GoPerson className=" text-2xl " />
               <p  className=" text-[10px] font-semibold">Login</p>
             </button>
