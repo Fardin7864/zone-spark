@@ -5,6 +5,7 @@ import ReactStars from "react-stars";
 
 const Card = ({ product, index }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [addCartIndex, setAddCardIndex] = useState(null);
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
@@ -17,6 +18,11 @@ const Card = ({ product, index }) => {
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
+
+  const handleCart = async (index) => { 
+    setAddCardIndex(index);
+    
+   }
 
   return (
     <div

@@ -27,7 +27,6 @@ const AllProducts = () => {
   const handleNext = () => {
     if (26 > page > 0) {
       setLoading(true);
-
       setPage(page + 1);
     }
   };
