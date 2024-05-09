@@ -16,11 +16,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <div className=" z-30">
-        <Navbar />
-        <NavManue/>
+          <Navbar />
+          <NavManue />
         </div>
         {children}
-        <Toaster position="top-center" containerClassName="text-xs" reverseOrder={false} />
+        <Toaster
+          position="top-center"
+          containerClassName="text-xs"
+          reverseOrder={false}
+        />
       </body>
     </html>
   );

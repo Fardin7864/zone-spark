@@ -26,10 +26,10 @@ const SidebarFilter = ({ title, options, w , icon, nestedOptions}) => {
         <div className={`${isShow ? "block" : "hidden"} absolute w-40`}> 
           <div className=" relative top-2 flex flex-col bg-white justify-start shadow-xl border-b">
             {options?.map((option, ind) => (
-              <button key={ind} className="  text-xs text-start border-b hover:bg-[#098cd0] hover:text-white rounded-md ">
+              <div key={ind} className="  text-xs text-start border-b hover:bg-[#098cd0] hover:text-white rounded-md ">
                 {/* {option} */}
                 <Options title={option?.option} options={option?.nastedOptions}/>
-              </button>
+              </div>
             ))}
           </div>
         </div>
