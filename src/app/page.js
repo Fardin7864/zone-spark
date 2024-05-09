@@ -1,8 +1,14 @@
+import MainContainer from "@/components/containers/MainContainer";
+import Sidebar from "@/components/sidebar/SidebarFilter";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
-    </main>
+    <MainContainer>
+      <div className=" px-5">
+        <div className=" w-[230px]">
+        <Sidebar />
+        </div>
+      </div>
+    </MainContainer>
   );
 }

@@ -37,7 +37,7 @@ const NavManue = () => {
       <div className=" bg-gradient-to-r from-[#090243] to-[#0987cb] overflow-hidden">
         <div className=" flex justify-between px-5">
           <div className=" w-full h-[49px] gap-2 flex items-center ">
-            <div className=" flex gap-3 bg-[#098cd0] h-full justify-center items-center px-3 text-white text-sm font-semibold">
+            <div className=" w-[230px] flex gap-3 bg-[#098cd0] h-full justify-center items-center px-3 text-white text-sm font-semibold">
               <Hamburger
                 tailClass="top-[8px] h-[25px]"
                 color={"white"}

@@ -22,7 +22,7 @@ const NavSelect = ({ title, options, w }) => {
         <div className={`${isShow ? "block" : "hidden"} absolute w-40`}> 
           <div className=" relative flex flex-col bg-white px-5 py-3 gap-3 justify-start shadow-xl">
             {options.map((option, ind) => (
-              <button key={ind} className=" hover:text-[#098cd0] text-[10px] text-start">
+              <button key={ind} className=" hover:text-[#098cd0] text-xs text-start">
                 {option}
               </button>
             ))}
