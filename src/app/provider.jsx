@@ -1,13 +1,14 @@
-"use client";
-
-import React, { createContext } from "react";
-import { SessionProvider } from "next-auth/react";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+"use client"
 import auth from "@/utils/firebase";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
-const AuthProvider = createContext();
 
-const Providers = ({ children }) => {
+export const AuthContext = createContext();
+
+const AuthanticationProvider = ({children}) => {
+
     // states
     const [user, setUser] = useState(null);
     const [isLoading, setLoading] = useState(true);
@@ -42,41 +43,14 @@ const Providers = ({ children }) => {
 
     // toasts
     const successToast = () => { 
-        toast('Successfully Loged In!', {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+        toast.success('Successfully Loged In!');
      }
 
     const faildToast =() => { 
-        toast('Log In faild!', {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+        toast.error('Log In faild!');
      }
     const networkFaildToast =() => { 
-        toast('please check your Network!', {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            });
+        toast.error('please check your Network!');
      }
 
     
@@ -108,11 +82,11 @@ const Providers = ({ children }) => {
 
 
 
-  return (
-    <AuthProvider.Provider>
-      <SessionProvider>{children}</SessionProvider>
-    </AuthProvider.Provider>
-  );
+    return (
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+    );
 };
 
-export default Providers;
+export default AuthanticationProvider;

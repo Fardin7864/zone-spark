@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import NavManue from "@/shared/NavManue";
 import { SessionProvider } from "next-auth/react";
 import Providers from "./provider";
+import AuthanticationProvider from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>
+        <AuthanticationProvider>
           <div className=" z-30">
             <Navbar />
             <NavManue />
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
             containerClassName="text-xs"
             reverseOrder={false}
           />
-        </Providers>
+        </AuthanticationProvider>
       </body>
     </html>
   );

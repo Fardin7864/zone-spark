@@ -1,11 +1,36 @@
 "use client";
+import { AuthContext } from "@/app/provider";
 import Image from "next/image";
-import React, { useState } from "react";
+import Link from "next/link";
+import React, { useContext, useEffect, useState } from "react";
 import ReactStars from "react-stars";
 
 const Card = ({ product, index }) => {
+  const { successToast, faildToast, networkFaildToast, creatUres, user,isLoading } = useContext(AuthContext);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [addCartIndex, setAddCardIndex] = useState(null);
+  const [loggedIn, setLoggedin ] = useState();
+
+  useEffect(() => { 
+    if(user){
+      setLoggedin(user)
+    }
+   },[user])
+
+   console.log(product)
+
+   const handleAddToCart = () => { 
+    if(!isLoading && loggedIn){
+      const loader = async () => { 
+        const res = await fetch(`https://summerfield.store/cart/${user?.reloadUserInfo?.email}`,{
+          method: "POST",
+
+        })
+        
+       }
+    }
+    }
+
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
@@ -25,7 +50,8 @@ const Card = ({ product, index }) => {
    }
 
   return (
-    <div
+    <Link
+    href={`/product/${product.id}`}
       key={product.id}
       className="w-full border rounded-md relative"
       onMouseEnter={() => handleMouseEnter(index)}
@@ -79,7 +105,7 @@ const Card = ({ product, index }) => {
           ({product?.rating || 0} Reviews)
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 
