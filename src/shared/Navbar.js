@@ -9,6 +9,7 @@ import SelectCur from "./Select";
 import MainContainer from "@/components/containers/MainContainer";
 import BecomeSellerBtn from "./Buttons";
 import Hamburger from "@/lib/Hamburger";
+import Link from "next/link";
 const Navbar = () => {
 
  
@@ -47,10 +48,10 @@ const Navbar = () => {
               <p  className=" text-[10px] font-semibold">Cart</p>
             </button>
 
-            <button className=" hover:text-blue-500 hidden md:flex flex-col justify-center items-center relative top-[7px]">
+            <Link href={"/login"} className=" hover:text-blue-500 hidden md:flex flex-col justify-center items-center relative top-[7px]">
               <GoPerson className=" text-2xl " />
               <p  className=" text-[10px] font-semibold">Login</p>
-            </button>
+            </Link>
           </div>
         </section>
       </>
