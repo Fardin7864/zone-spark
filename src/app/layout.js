@@ -17,6 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta property="fb:app_id" content="380900851328722" />
+      </head>
       <body className={inter.className}>
         <AuthanticationProvider>
           <div className=" z-30">
